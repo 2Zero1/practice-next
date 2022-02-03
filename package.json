@@ -4,7 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "next start",
+    "dev": "next dev -p 8000",
+    "build": "next build",
+    "serve": "http-server out -p 8000",
+    "check": "tsc --noEmit",
+    "watch": "jest --watchAll",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx",
+    "test": "npm run test:unit && HEADLESS=true npm run test:e2e",
+    "test:unit": "jest",
+    "test:e2e": "codeceptjs run --steps",
+    "test:ci-e2e": "concurrently -k -s first npm:serve 'sleep 5 && npm run test:e2e'"
   },
   "keywords": [],
   "author": "",
