@@ -2,7 +2,7 @@
   "name": "2022",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.tsx",
   "scripts": {
     "start": "next start",
     "dev": "next dev -p 8000",
@@ -10,7 +10,7 @@
     "serve": "http-server out -p 8000",
     "check": "tsc --noEmit",
     "watch": "jest --watchAll",
-    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint --fix --ext .js,.jsx,.ts,.tsx src",
     "test": "npm run test:unit && HEADLESS=true npm run test:e2e",
     "test:unit": "jest",
     "test:e2e": "codeceptjs run --steps",
