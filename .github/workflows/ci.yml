@@ -31,6 +31,6 @@ jobs:
           mkdir -p out/_next
           cp -rp .next/static out/_next/
           rm -rf .next
-          cp favicon.ico out/
+          # cp favicon.ico out/
       - name: Run E2E tests
         run: HEADLESS=true npm run test:ci-e2e
